@@ -11,6 +11,11 @@
         <TabControl>
             <TabItem Header="Sales">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="400*"/>
+                    </Grid.ColumnDefinitions>
                     <DatePicker HorizontalAlignment="Left" Margin="99,53,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="Date_lbl" Content="Date" HorizontalAlignment="Left" Margin="15,51,0,0" VerticalAlignment="Top"/>
                     <Label Content="New Sale" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="69"/>
@@ -25,12 +30,20 @@
             </TabItem>
             <TabItem Header="Purchase">
                 <Grid Background="#FFE5E5E5">
-                    <DatePicker HorizontalAlignment="Left" Margin="99,53,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="Date_lbl2" Content="Date" HorizontalAlignment="Left" Margin="15,51,0,0" VerticalAlignment="Top"/>
-                    <Label Content="New Purchase" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="99"/>
-                    <ComboBox HorizontalAlignment="Left" Margin="99,91,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsDropDownOpen="True"/>
-                    <Label x:Name="Company" Content="Date" HorizontalAlignment="Left" Margin="15,87,0,0" VerticalAlignment="Top"/>
-
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="400*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="New Purchase" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="98" Grid.ColumnSpan="2"/>
+                    <DatePicker Margin="5,50,5,0" VerticalAlignment="Top" Grid.Column="1" Height="22" HorizontalAlignment="Left" Width="190"/>
+                    <Label x:Name="Date_lbl2" Content="Date" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="26" Width="35"/>
+                    <ComboBox HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" Width="190" IsEditable="True" Grid.Column="1" Height="22"/>
+                    <Label x:Name="Company_lbl" Content="Company" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+                    <Label x:Name="GST_lbl" Content="GST" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="26" Width="31"/>
+                    <TextBox HorizontalAlignment="Left" Margin="5,130,5,0" Text="%" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1" Height="22"/>
+                    <Label x:Name="TotalAmount_lbl" Content="Total Amount" Margin="0,168,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Center" Width="80"/>
+                    <TextBox HorizontalAlignment="Left" Margin="5,170,5,0" Text="Amount" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1" Height="22"/>
                 </Grid>
             </TabItem>
         </TabControl>
