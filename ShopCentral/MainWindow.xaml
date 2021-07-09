@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShopCentral"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="700">
     <Grid>
+
+        <TabControl>
+            <TabItem Header="Sales">
+                <Grid Background="#FFE5E5E5">
+                    <DatePicker HorizontalAlignment="Left" Margin="99,53,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="Date_lbl" Content="Date" HorizontalAlignment="Left" Margin="15,51,0,0" VerticalAlignment="Top"/>
+                    <Label Content="New Sale" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="69"/>
+                    <Label Content="Cash Sales" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
+                    <Label  Content="Epay Sales" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
+                    <Label  Content="Eftpos Sales" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Height="25" Width="89"/>
+                    <TextBox HorizontalAlignment="Left" Margin="99,91,0,0" Text="Cash Sales" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18" Cursor="IBeam"/>
+                    <TextBox HorizontalAlignment="Left" Margin="99,153,0,0" Text="Epay Sales" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18"/>
+                    <TextBox HorizontalAlignment="Left" Margin="99,123,0,0" Text="Eftpos Sales" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18"/>
+                    <Label Content="Past Sales" HorizontalAlignment="Left" Margin="335,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="69"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Purchase">
+                <Grid Background="#FFE5E5E5">
+                    <DatePicker HorizontalAlignment="Left" Margin="99,53,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="Date_lbl2" Content="Date" HorizontalAlignment="Left" Margin="15,51,0,0" VerticalAlignment="Top"/>
+                    <Label Content="New Purchase" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="99"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="99,91,0,0" VerticalAlignment="Top" Width="120" IsEditable="True" IsDropDownOpen="True"/>
+                    <Label x:Name="Company" Content="Date" HorizontalAlignment="Left" Margin="15,87,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
