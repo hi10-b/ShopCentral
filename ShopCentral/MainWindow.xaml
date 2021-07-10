@@ -16,16 +16,12 @@
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="400*"/>
                     </Grid.ColumnDefinitions>
-                    <DatePicker HorizontalAlignment="Left" Margin="99,53,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="Date_lbl" Content="Date" HorizontalAlignment="Left" Margin="15,51,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="Date_lbl" Content="Date" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
                     <Label Content="New Sale" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="69"/>
-                    <Label Content="Cash Sales" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
-                    <Label  Content="Epay Sales" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-                    <Label  Content="Eftpos Sales" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Height="25" Width="89"/>
-                    <TextBox HorizontalAlignment="Left" Margin="99,91,0,0" Text="Cash Sales" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18" Cursor="IBeam"/>
-                    <TextBox HorizontalAlignment="Left" Margin="99,153,0,0" Text="Epay Sales" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18"/>
-                    <TextBox HorizontalAlignment="Left" Margin="99,123,0,0" Text="Eftpos Sales" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18"/>
+                    <Label  Content="Total Sales" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Height="25" Width="89" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TotalSales_txtbox" HorizontalAlignment="Center" Margin="0,86,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="146" Height="18" Grid.Column="1"/>
                     <Label Content="Past Sales" HorizontalAlignment="Left" Margin="335,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="69"/>
+                    <DatePicker x:Name="sales_date" Grid.Column="1" HorizontalAlignment="Left" Margin="27,51,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Purchase">
@@ -36,14 +32,16 @@
                         <ColumnDefinition Width="400*"/>
                     </Grid.ColumnDefinitions>
                     <Label Content="New Purchase" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.297" Height="26" Width="98" Grid.ColumnSpan="2"/>
-                    <DatePicker Margin="5,50,5,0" VerticalAlignment="Top" Grid.Column="1" Height="22" HorizontalAlignment="Left" Width="190"/>
+                    <DatePicker x:Name="Purchase_date" Margin="5,50,5,0" VerticalAlignment="Top" Grid.Column="1" Height="22" HorizontalAlignment="Left" Width="190"/>
                     <Label x:Name="Date_lbl2" Content="Date" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="26" Width="35"/>
-                    <ComboBox HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" Width="190" IsEditable="True" Grid.Column="1" Height="22"/>
+                    <ComboBox x:Name="company_picker" HorizontalAlignment="Center" Margin="0,87,0,0" VerticalAlignment="Top" Width="190" IsEditable="True" Grid.Column="1" Height="22"/>
                     <Label x:Name="Company_lbl" Content="Company" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
                     <Label x:Name="GST_lbl" Content="GST" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="26" Width="31"/>
-                    <TextBox HorizontalAlignment="Left" Margin="5,130,5,0" Text="%" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1" Height="22"/>
+                    <TextBox x:Name="gst_textbox" HorizontalAlignment="Left" Margin="5,130,5,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1" Height="22"/>
                     <Label x:Name="TotalAmount_lbl" Content="Total Amount" Margin="0,168,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Center" Width="80"/>
-                    <TextBox HorizontalAlignment="Left" Margin="5,170,5,0" Text="Amount" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1" Height="22"/>
+                    <TextBox x:Name="purchaseTotal_textbox" HorizontalAlignment="Left" Margin="5,170,5,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Grid.Column="1" Height="22"/>
+                    <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="261,316,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+                    <Label x:Name="test_lbl" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="262,261,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
         </TabControl>
